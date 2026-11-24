@@ -1,7 +1,7 @@
-# Gogs Protected Branch Bypass PoC
+# Gogs Protected Branch Bypass PoC (CVE-2026-133113)
 
 Proof of concept for a protected branch bypass in Gogs through the pull request
-merge path.
+merge path. Affected: Gogs 0.14.4 and earlier, fixed in a later release.
 
 Branch protection is enforced by the pre-receive hook, and the hook only runs
 its checks when `SSH_ORIGINAL_COMMAND` is set. The normal write paths set it. The
